@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>css grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+      body{   background-color: #333;
+      color: white;
+      }
+      .container{
+          width: 80vw;
+          height: 80vh;
+          margin: 5vh 5vw;
+          background: #341;
+      }
+
+      .container header{
+          background-color: olive;
+      }
+
+      .container footer{
+          background-color: green;
+      }
+      .container{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+      }
+
+      .container header{
+        grid-column-start: 1;
+          grid-column-end: 3;
+
+
+
+          grid-row-start: 1;
+          grid-row-end: 3;
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+
+      }
+      .container footer{
+        grid-column-start: 2;
+        grid-column-end: 4;
+
+
+     
+
+          grid-row-start: 2;
+          grid-row-end: 4;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+
+      }
+
+
+
+    </style>
+
+  </head>
+  <body>
+     
+      <div class="container">
+        <header> 
+        <h1>CSS Grid</h1>
+          <h2>Overloping Boxes</h2>
+        </header>
+          <footer>
+           <p> IT'S A BEAUTIFUL TECHNOLOGIES! </p>
+            </footer>
+      </div>
+
+
+</body>
+</html>

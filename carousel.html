@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Grid</title>
+    <STyle>
+            body{
+               background-color: #333;
+               display:flex;
+             justify-content: center ;
+             align-items: center;
+            }
+.carousel{
+    background-color: #555;
+    width:800px ;
+    height: 700px;
+    display: grid;
+    grid-template-columns:repeat(10,1fr) ;
+    grid-template-rows:repeat(5,1fr) ;
+}
+.carousel .slide{
+    background-color: #999;
+    color: white;
+    font-size: 50px;
+   box-sizing: border-box;
+    /* opacity: 0.5; */
+
+}
+
+.carousel .slide:nth-child(1){
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+
+  grid-column-start: 2;
+  grid-column-end: 5;
+  background-color: #888;
+}
+
+
+.carousel .slide:nth-child(2){
+  grid-row-start: 2;
+  grid-row-end: 5;
+
+
+  grid-column-start: 3;
+  grid-column-end: 9;
+  z-index: 1;
+}
+
+.carousel .slide:nth-child(3){
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+
+  grid-column-start: 7;
+  grid-column-end: 10;
+  background-color: #888;
+}
+
+.carousel .arrows{
+    color: white ;
+}
+.carousel .arrows.prev{
+    grid-row-start: 3 ;
+}
+.carousel .arrows.next{
+    grid-row-start: 3 ;
+}
+
+.carousel .dots{
+    color: white;
+}
+.carousel .dots .one{
+  grid-row-start: 9;
+  grid-column-start: 3;
+  grid-row-end: 9;
+  grid-column-end: 3;
+
+}
+.carousel .dots .two{
+    grid-row-start: 9;
+  grid-column-start: 3;
+  grid-row-end: 9;
+  grid-column-end: 3;
+}
+.carousel .dots .three{
+ grid-row-start: 9;
+  grid-column-start: 3;
+  grid-row-end: 9;
+  grid-column-end: 3;
+}
+
+
+.carousel >*{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+    </STyle>
+</head>
+<body>
+    <div class="carousel">
+        
+        
+
+<div class="slide"><span><img src="imagini/1.jpg" alt="" class="slide"></span></div>
+<div class="slide"><span><img src="imagini/2.jpg" alt="" class="slide"></span></div>
+<div class="slide"><span> <img src="imagini/3.jpg" alt="" class="slide"></span></div>
+        <a href="" class="arrows prev"><span>PREV</span></a>
+        <a href="" class="arrows next"><span>NEXT</span></a>
+
+        <a href="" class="dots one">1</a>
+        <a href="" class="dots two">2</a>
+        <a href="" class="dots three">3</a>
+        
+    </div>
+</body>
+</html>
